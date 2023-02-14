@@ -1,0 +1,42 @@
+@import-normalize;
+// @import './shared.scss';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@800&family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  //   font-family: $primary-font-stack;
+  line-height: 1.5;
+  //   font-size: 15px;
+  //   color: $primary-color;
+  //   background-color: $background-color;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
