@@ -1,23 +1,22 @@
 import Form from 'react-bootstrap/Form'
-import { useState } from 'react'
 
-import { StyledRanges } from './styledRanges'
+import { StyledRanges, DiskValue } from './styledRanges'
 
-const Ranges = () => {
-  const [storageValue, setStorageValue] = useState(0)
-  const [transferValue, setTransferValue] = useState(0)
-
-  const storageHandler = (e) => {
-    setStorageValue(e.target.value)
-  }
-  const transferHandler = (e) => {
-    setTransferValue(e.target.value)
-  }
-
+const Ranges = ({
+  storageValue,
+  transferValue,
+  storageHandler,
+  transferHandler,
+}) => {
   return (
     <StyledRanges>
       <Form.Label>Storage:</Form.Label>
-      {storageValue !== 0 && <b>{storageValue}</b>}
+      {storageValue !== 0 && (
+        <DiskValue>
+          {storageValue}
+          <b> GB</b>
+        </DiskValue>
+      )}
       <Form.Range
         value={storageValue}
         onChange={storageHandler}
@@ -26,8 +25,12 @@ const Ranges = () => {
         max={1000}
       />
       <Form.Label>Transfer:</Form.Label>
-      {transferValue !== 0 && <b>{transferValue}</b>}
-
+      {transferValue !== 0 && (
+        <DiskValue>
+          {transferValue}
+          <b> GB</b>
+        </DiskValue>
+      )}
       <Form.Range
         value={transferValue}
         onChange={transferHandler}

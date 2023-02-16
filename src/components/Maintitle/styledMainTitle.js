@@ -5,4 +5,6 @@ export const StyledMainTitle = styled.h2`
   font-weight: 700;
   margin-bottom: 16px;
   padding-top: 12px;
+  @media all and (orientation: portrait) {
+  }
 `

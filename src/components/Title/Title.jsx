@@ -1,6 +1,6 @@
 import { StyledTitle } from './styledTitle'
-const Title = ({ title }) => {
-  return <StyledTitle>{title}</StyledTitle>
+const Title = ({ title, color }) => {
+  return <StyledTitle color={color}>{title}</StyledTitle>
 }
 
 export default Title

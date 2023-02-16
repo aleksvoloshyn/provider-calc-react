@@ -1,12 +1,7 @@
-import Provider from '../Provider/Provider'
 import { StyledProviders } from './styledProviders'
 
-const Providers = () => {
-  return (
-    <StyledProviders>
-      <Provider></Provider>
-    </StyledProviders>
-  )
+const Providers = ({ children }) => {
+  return <StyledProviders>{children}</StyledProviders>
 }
 
 export default Providers
